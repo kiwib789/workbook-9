@@ -1,13 +1,30 @@
 package com.example.NorthwindTradersSpringBoot;
 
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
+
 
 @SpringBootApplication
-public class NorthwindTradersSpringBootApplication {
+public class NorthwindTradersSpringBootApplication implements CommandLineRunner {
 
-	public static void main(String[] args) {
+		@Autowired
+		private ProductDAO productDAO;
+
+		public static void main(String[] args) {
+
 		SpringApplication.run(NorthwindTradersSpringBootApplication.class, args);
-	}
 
+
+
+
+		}
+
+	@Override
+	public void run(String... args) throws Exception {
+
+	}
 }
